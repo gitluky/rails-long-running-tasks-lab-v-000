@@ -38,6 +38,10 @@ class SongsController < ApplicationController
     end
   end
 
+  def upload
+
+  end
+
   def destroy
     @song = Song.find(params[:id])
     @song.destroy
@@ -51,4 +55,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
